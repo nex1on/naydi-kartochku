@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.bg-black {
+			background: black;
+			height: 200px; 
+			width: 350px;
+		}
+	</style>
+</head>
+<body style="background-image: url(fon.png); background-size: 100%;">
+	<p style="font-family: Arial; font-size: 30px; padding-left: 800px">У тебя 3 попытки</p>
+	<h1 style="font-family: Arial; font-size: 30px; padding-left: 850px">Попыток: <span class="score">3</span></h1>
+	<button class="btn" style="margin-left: 880px;">Спрятать</button>
+	<p style="font-family: Arial; font-size: 30px; padding-left: 830px">Найди мишку</p>
+	<div>
+		<div class="buyvol" style="background-image: url(buyvol.png); background-size: 100%; transition: 1s; position: absolute; height: 200px; width: 350px; left: 400px;"></div>
+		<div class="juraf" style="background-image: url(juraf.png); background-size: 100%; transition: 1s; position: absolute; height: 200px; width: 350px; left: 800px;"></div>
+		<div class="lev" style="background-image: url(lev.png); background-size: 100%; transition: 1s; position: absolute; height: 200px; width: 350px; left: 1200px; top: 263px"></div>
+		<div class="medved" style="background-image: url(medved.png); background-size: 100%; transition: 1s; position: absolute; height: 200px; width: 350px; left: 400px; top: 500px;"></div>
+		<div class="pantera" style="background-image: url(pantera.png); background-size: 100%; transition: 1s; position: absolute; height: 200px; width: 350px; left: 800px; top: 500px;"></div>
+		<div class="slon" style="background-image: url(slon.png); background-size: 100%; transition: 1s; position: absolute; height: 200px; width: 350px; left: 1200px; top: 500px;"></div>
+	</div>
+	<script>
+		let score1 = 3;
+		let score = document.querySelector('.score');
+		let btn = document.querySelector('.btn')
+		let buyvol = document.querySelector('.buyvol');
+		let juraf = document.querySelector('.juraf');
+		let lev = document.querySelector('.lev');
+		let medved = document.querySelector('.medved');
+		let pantera = document.querySelector('.pantera');
+		let slon = document.querySelector('.slon');
+
+
+		btn.onclick = function() {
+			buyvol.style.background = "black";
+			buyvol.style.left = 800 + "px";
+
+			juraf.style.background = "black";
+			juraf.style.left = 400 + "px";
+
+			lev.style.background = "black";
+			lev.style.left = 400 + "px";
+			lev.style.top = 500 + "px"
+
+			medved.style.background = "black";
+			medved.style.left = 1200 + "px";
+			medved.style.top = 263 + "px";
+
+			pantera.style.background = "black";
+			pantera.style.left = 1200 + "px";
+
+			slon.style.background = "black";
+			slon.style.left = 800 + "px";
+		}
+
+
+		buyvol.onclick = function() {
+			alert("Неправильно");
+			score1 = score1 - 1;
+			score.innerHTML = score1;
+			if(score1==0) {
+				alert("Проиграл")
+			}
+		}
+
+		juraf.onclick = function() {
+			alert("Неправильно");
+			score1 = score1 - 1;
+			score.innerHTML = score1;
+			if(score1==0) {
+				alert("Проиграл")
+			}
+		}
+
+		lev.onclick = function() {
+			alert("Неправильно");
+			score1 = score1 - 1;
+			score.innerHTML = score1;
+			if(score1==0) {
+				alert("Проиграл")
+			}
+		}
+
+		medved.onclick = function() {
+			alert("You win!");
+		}
+
+		pantera.onclick = function() {
+			alert("Неправильно");
+			score1 = score1 - 1;
+			score.innerHTML = score1;
+			if(score1==0) {
+				alert("Проиграл")
+			}
+		}
+
+		slon.onclick = function() {
+			alert("Неправильно");
+			score1 = score1 - 1;
+			score.innerHTML = score1;
+			if(score1==0) {
+				alert("Проиграл")
+			}
+		}
+
+	</script>
+</body>
+</html>
